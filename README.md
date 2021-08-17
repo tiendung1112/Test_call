@@ -84,6 +84,7 @@ Tệp server.js sẽ chạy ứng dụng trên cổng 1483 và xử lý các th�
 
 Trong tệp server.js, hãy tạo một classic Express Server và add middleware để có quyền truy cập vào thư mục chung:
 
+readme 
 
 const express = require('express')
 const app = express()
@@ -149,9 +150,15 @@ const port = process.env.PORT || 1483
 server.listen(port, () => {
   console.log(`Express server listening on port ${port}`)
 })
+
+
+
 3. Tạo client views
 
 Chúng ta sẽ tạo các chế độ xem của ứng dụng của chúng ta trong folder public / index.html. Ví dụ: một cái gì đó đơn giản sẽ hoạt động, chúng tôi sẽ sử dụng hai vùng chứa phần, một cho lựa chọn phòng và một hộp khác cho view hiển thị video. Lưu ý rằng chúng ta đang thêm kiểu cho các chế độ xem này bằng CSS và import thư viện SocketIO tại đây:
+
+
+
 
 <!DOCTYPE html>
 <html lang=”en”>
@@ -217,6 +224,8 @@ Chúng ta sẽ tạo các chế độ xem của ứng dụng của chúng ta tro
     <script type=”text/javascript” src=”client.js”></script>
   </body>
 </html>
+
+
 Bây giờ thì chạy máy chủ trên console và kiểm tra xem nó có đang chạy chính xác trong trình duyệt của bạn hay không và chế độ xem ứng dụng khách được hiển thị:
 
 node server.js
