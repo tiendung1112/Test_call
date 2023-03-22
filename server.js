@@ -8,6 +8,7 @@ app.use('/', express.static('public'))
 io.on('connection', (socket) => {
   socket.on('join', (roomId) => {
     const selectedRoom = io.sockets.adapter.rooms[roomId]
+    console.log('selectedRoom', selectedRoom)
     const numberOfClients = selectedRoom ? selectedRoom.length : 0
 
     // These events are emitted only to the sender socket.
